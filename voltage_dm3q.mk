@@ -12,9 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/dm3q/device.mk)
 
 # Inherit from the Lineage configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_dm3q
+# Pif-certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1920
+
+PRODUCT_NAME := voltage_dm3q
 PRODUCT_DEVICE := dm3q
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := SM-S918B
@@ -26,3 +32,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc=$(call normalize-path-list, "dm3qxxx-user 14 UP1A.231005.007 S918BXXS7CXL2 release-keys")
 
 BUILD_FINGERPRINT := samsung/dm3qxxx/dm3q:14/UP1A.231005.007/S918BXXS7CXL2:user/release-keys
+
+# Voltage-Ify
+VOLTAGE_BUILD_TYPE = OFFICIAL
