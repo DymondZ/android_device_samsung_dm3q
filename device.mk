@@ -40,8 +40,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# SPen
+TARGET_HAS_SPEN := true
 
 # Touch features
 PRODUCT_PACKAGES += \
