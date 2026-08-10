@@ -6,4 +6,7 @@
 <resources>
     <!-- Do not translate. Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Galaxy S23 Ultra</string>
+	
+	<!-- Disable 5GHz DFS channels for SoftAP/Hotspot -->
+    <bool name="config_wifiSoftapDisable5gDfs">true</bool>
 </resources>
