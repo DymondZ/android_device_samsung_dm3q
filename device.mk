@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # SPen
-TARGET_HAS_SPEN := true
+TARGET_HAS_SPEN := false
 
 # Touch features
 PRODUCT_PACKAGES += \
